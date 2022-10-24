@@ -225,4 +225,16 @@ $(document).ready(function () {
       $(".navBar").css("left", "0rem");
     }
   });
+
+  $(".navBar ul")
+    .children()
+    .each(function (index, element) {
+      $(element).click(function (e) {
+        if ($(window).innerWidth() <= 1175) {
+          navBar = true;
+          $("#menuShow").css("left", "1rem");
+          $(".navBar").css("left", "-20rem");
+        }
+      });
+    });
 });
