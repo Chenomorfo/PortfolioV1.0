@@ -208,10 +208,13 @@ $(document).ready(function () {
   $(window).resize(function () {
     if ($(this).width() > 1175) {
       $(".navBar ul").css("display", "flex");
-      navBar = false;
+      $(".navBar").css("left", "0rem");
+
+      navBar = true;
     } else {
-      /* navBar = false; */
       $(".navBar ul").css("display", "block");
+      $(".navBar").css("left", "-20rem");
+      $("#menuShow").css("left", "1rem");
     }
   });
   //navBar button
