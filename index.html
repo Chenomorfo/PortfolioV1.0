@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello stranger</title>
+    <link rel="shortcut icon" href="./imgs/myLogo.jpg" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./styles/myStyle.css">
+    <!-- <link rel="stylesheet" href="../styles/information.css" />
+    <link rel="stylesheet" href="../styles/orbit.css" />
+    <link rel="stylesheet" href="../styles/projects.css" />
+    <link rel="stylesheet" href="../styles/contactMe.css" /> -->
+  </head>
+
+  <body>
+
+    <div class="navBar">
+      <ul>
+        <li><a href="#mySelf">MySelf</a></li>
+        <li><a href="#mySkills">MySkills</a></li>
+        <li><a href="#myProjects">MyProjects</a></li>
+        <li><a href="#myContact">FindMe</a></li>
+        <li></li>
+        <a href="#" id="DayNight">☀️<button><span></span></button>🌙</a>
+      </ul>
+    </div>
+    <p id="menuShow"><button>&#9776;</button></p>
+    
+    <div class="notNavBar">
+      <div id="mySelf" class="ch-header">
+        <h1>Mi nombre</h1>
+        <!-- <h1>Angel Humberto Hernandez Villanueva</h1>  -->
+        <h3>Web Developer</h3>
+      </div>
+      <div class="switch">
+        {}<button id="checkInfo"><span></span></button>ABC
+      </div>
+  
+      <div class="ch-content">
+        <img id="myLogo" src="./imgs/charmander.png" alt="" />
+        <div id="includedAboutMe"></div>
+      </div>
+  
+      <div id="mySkills" data-carousel>
+        <button class="ch-button prev" data-carousel-button="prev">
+          &#8592;
+        </button>
+        <button class="ch-button next" data-carousel-button="next">
+          &#8594;
+        </button>
+  
+        <div class="ch-orbitShow" data-slides>
+          <div class="Sun" id="Iused">
+            Technologies <br />I used
+            <div class="planet"><img src="./imgs/nodejs.webp" />NodeJs</div>
+            <div class="planet"><img src="./imgs/bootstrap.png" />Boot Strap</div>
+            <div class="planet"><img src="./imgs/unity.png" />Unity</div>
+            <div class="planet"><img src="./imgs/handlebars.png" />Handle Bars</div>
+            <div class="planet"><img src="./imgs/jquery.png" />JQuery</div>
+            <div class="planet"><img src="./imgs/mongoDB.webp" />Mongo DB</div>
+            <div class="planet"><img src="./imgs/mySQL.png" />MySQL</div>
+          </div>
+          <div class="Sun" id="Iknow" data-active>
+            Languages <br />
+            I know
+            <div class="planet"><img src="./imgs/c++.png" />C++</div>
+            <div class="planet"><img src="./imgs/java.png" />Java</div>
+            <div class="planet"><img src="./imgs/js.png" />JS</div>
+            <div class="planet"><img src="./imgs/csharp.png" /> C#</div>
+          </div>
+          <div class="Sun" id="Iwant">
+            I want to Learn...
+            <div class="planet"><img src="./imgs/lua.png" />Lua</div>
+            <div class="planet"><img src="./imgs/kotlin.png" />Kotlin</div>
+            <div class="planet"><img src="./imgs/swift.png" />Swift</div>
+            <div class="planet"><img src="./imgs/python.png" />Python</div>
+            <div class="planet"><img src="./imgs/rust.png" />Rust</div>
+            <div class="planet"><img src="./imgs/ruby.png" />Ruby</div>
+          </div>
+        </div>
+      </div>
+  
+      <h1 id="myProjects" style="text-align: center; margin-bottom: 25px">Some of my projects</h1>
+      <div class="myProjects">
+        <div class="card" id="Csharp">
+          <img src="./imgs/csharp.png" alt="" />
+          <h3>C#</h3>
+        </div>
+        <div class="card" id="Java">
+          <img src="./imgs/java.png" alt="" srcset="" />
+          <h3>Java</h3>
+        </div>
+        <div class="card" id="JavaScript">
+          <img src="./imgs/js.png" alt="" srcset="" />
+          <h3>JavaScript</h3>
+        </div>
+      </div>
+  
+      <footer></footer>
+
+      <h1 id="myProjects" style="text-align: center; margin: 25px auto;">You can find me here</h1>
+      <div id="myContact" class="ContactMe">
+        <a href="https://github.com/Chenomorfo" target="_blank"><img src="./imgs/github.png"></a>
+        <a href="https://www.linkedin.com/in/ahhvaliascheno/" target="_blank"><img src="./imgs/linkedIn.png"></a>
+    </div>
+   
+    
+  </body>
+  <script src="./scripts/jquery-3.6.1.min.js"></script>
+  <script src="./scripts/information.js"></script>
+  <script src="./scripts/orbit.js"></script>
+  <script src="./scripts/carrousel&cards.js"></script>
+</html>

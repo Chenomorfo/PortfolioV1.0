@@ -1,0 +1,20 @@
+@mixin sliderBox($width, $heigth) {
+    button {
+        cursor: pointer;
+        position: relative;
+        width: $width;
+        height: $heigth;
+        border-radius: 20px;
+        span {
+          z-index: 11;
+          position: absolute;
+          border-radius: 50%;
+          top: 10%;
+          left: 59%;
+          height: 80%;
+          width: 38%;
+          background-color: white;
+          transition: all 0.5s ease;
+        }
+}
+}

@@ -1,0 +1,513 @@
+* {
+  background-color: rgb(63, 78, 79);
+  color: white;
+  margin: 0;
+  padding: 0;
+  transition: background-color 1s;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+#menuShow {
+  background-color: unset;
+  display: none;
+  text-align: right;
+  margin-right: 0.6rem;
+}
+#menuShow button {
+  border: 3px solid black;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+}
+#menuShow button:hover {
+  font-size: 2.5rem;
+}
+
+.navBar {
+  z-index: 111;
+  position: fixed;
+  width: 100%;
+}
+.navBar ul {
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  background-color: rgb(44, 54, 57);
+}
+.navBar ul li {
+  color: rgb(220, 215, 201);
+}
+.navBar ul #DayNight {
+  cursor: default;
+  display: flex;
+  text-decoration: none;
+  font-size: 2.2rem;
+  background-color: unset;
+}
+.navBar ul #DayNight button {
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  border-radius: 20px;
+}
+.navBar ul #DayNight button span {
+  z-index: 11;
+  position: absolute;
+  border-radius: 50%;
+  top: 10%;
+  left: 59%;
+  height: 80%;
+  width: 38%;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+.navBar li {
+  background-color: unset;
+  margin: auto 25px;
+}
+.navBar li a {
+  background-color: unset;
+  text-decoration: none;
+  font-size: 2.2rem;
+  background-color: rgb(44, 54, 57);
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.navBar li a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.notNavBar {
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.notNavBar .ch-header {
+  margin-top: calc(2.2rem + 50px);
+  text-align: center;
+}
+.notNavBar .ch-content {
+  width: 80%;
+  display: flex;
+  margin: auto;
+}
+.notNavBar .ch-content img {
+  width: 512px;
+  height: 512px;
+  margin: 15px;
+  border-radius: 20px;
+}
+.notNavBar .ch-content #includedAboutMe {
+  margin: auto;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: rgb(44, 54, 57);
+  font-size: 1.4em;
+}
+.notNavBar .ch-content #includedAboutMe * {
+  background-color: unset;
+}
+.notNavBar .switch {
+  height: 42px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  right: 16rem;
+  font-size: 2rem;
+}
+.notNavBar .switch button {
+  cursor: pointer;
+  position: relative;
+  width: 84px;
+  height: 100%;
+  border-radius: 20px;
+}
+.notNavBar .switch button span {
+  z-index: 11;
+  position: absolute;
+  border-radius: 50%;
+  top: 10%;
+  left: 59%;
+  height: 80%;
+  width: 38%;
+  background-color: white;
+  transition: all 0.5s ease;
+}
+.notNavBar .switch button {
+  margin: auto 5px;
+}
+.notNavBar .ch-orbitShow {
+  margin: 125px auto;
+  width: 80%;
+  display: flex;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.notNavBar .ch-orbitShow .Sun {
+  margin: auto;
+  position: relative;
+  display: flex;
+  border-radius: 100px;
+  width: 150px;
+  height: 150px;
+  background-color: rgb(162, 123, 92);
+  color: black;
+  font-size: 1.5rem;
+  transition: background-color 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.notNavBar .ch-orbitShow .Sun:hover {
+  background-color: rgb(220, 215, 201);
+}
+.notNavBar .ch-orbitShow .Sun > .planet {
+  background-color: rgb(220, 215, 201);
+  color: black;
+  opacity: 0;
+  font-size: 0rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 200px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+.notNavBar .ch-orbitShow .Sun > .planet img {
+  background-color: unset;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.notNavBar .ch-orbitShow .Sun > .planet:hover {
+  font-size: 1.2rem;
+}
+.notNavBar .ch-orbitShow .Sun > .planet:hover img {
+  display: none;
+}
+.notNavBar .ch-button {
+  opacity: 0;
+}
+.notNavBar .myProjects {
+  margin: auto;
+  display: flex;
+  width: 80%;
+}
+.notNavBar .myProjects .card {
+  position: relative;
+  display: grid;
+  grid-template-rows: 80% 20%;
+  margin: auto;
+  width: 280px;
+  height: 400px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  opacity: 50%;
+  transition: opacity 0.5s;
+}
+.notNavBar .myProjects .card * {
+  font-size: 1.3rem;
+  color: black;
+  text-align: center;
+  background: none;
+}
+.notNavBar .myProjects .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.notNavBar .myProjects .card .active {
+  display: grid;
+  opacity: 1;
+  cursor: default;
+}
+.notNavBar .myProjects .card:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.notNavBar .myProjects .card.active a {
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 15px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.notNavBar .myProjects .card.active a h3 {
+  color: black;
+}
+.notNavBar .myProjects .card.active a:hover {
+  background-color: black;
+}
+.notNavBar .myProjects .card.active a:hover h3 {
+  color: white;
+}
+.notNavBar .ContactMe {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.notNavBar .ContactMe a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 5%;
+  width: 96px;
+  height: 96px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 5px;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}
+.notNavBar .ContactMe a img {
+  width: 100%;
+  height: 100%;
+}
+.notNavBar .ContactMe a img:hover {
+  width: 90%;
+  height: 90%;
+}
+
+/* animations */
+@-webkit-keyframes HomeToOrigin {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    transform: translate(0, 0);
+  }
+}
+@keyframes HomeToOrigin {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    transform: translate(0, 0);
+  }
+}
+@-webkit-keyframes OriginToHome {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes OriginToHome {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@media screen and (max-width: 1435px) {
+  .ch-content #includedAboutMe * {
+    font-size: 1.2rem;
+  }
+  .ch-content #includedAboutMe * p {
+    text-align: justify;
+  }
+}
+/* NavBar */
+@media screen and (max-width: 1175px) {
+  #menuShow {
+    display: block;
+    position: absolute;
+    z-index: 111;
+    left: 1rem;
+    top: 2rem;
+    transition: all 0.5s ease;
+  }
+  .navBar {
+    z-index: 22;
+    position: absolute;
+    left: -20rem;
+    top: 0;
+    width: 20rem;
+    height: 100%;
+    text-align: center;
+    transition: left 0.5s ease;
+  }
+  .navBar ul {
+    padding-top: 5rem;
+    height: 100%;
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .navBar ul li {
+    margin: 2rem auto;
+  }
+  .navBar ul #DayNight {
+    justify-content: center;
+    height: 3rem;
+  }
+  .notNavBar {
+    height: 100vh;
+  }
+  .notNavBar .ch-header {
+    margin-top: 15px;
+  }
+  .notNavBar .switch {
+    justify-content: center;
+    right: 0;
+    margin: 10px auto;
+  }
+  .notNavBar .ch-content {
+    height: 525px;
+    position: relative;
+    display: block;
+  }
+  .notNavBar .ch-content img {
+    background-color: rgb(44, 54, 57);
+    float: left;
+  }
+}
+@media screen and (max-width: 1175px) and (max-width: 999px) {
+  .notNavBar .ch-content {
+    margin: auto;
+    display: block;
+    width: 95%;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1175px) and (max-width: 775px) {
+  .notNavBar .ch-content {
+    height: auto;
+  }
+}
+@media screen and (max-width: 1175px) and (max-width: 610px) {
+  .notNavBar .ch-content {
+    display: grid;
+    width: 100%;
+  }
+  .notNavBar .ch-content img {
+    padding: 0;
+    margin: 0;
+    float: none;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .notNavBar .ch-content #includedAbountMe {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 990px) {
+  @-webkit-keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  #mySkills {
+    width: 100%;
+    position: relative;
+  }
+  .ch-orbitShow {
+    margin: 225px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .ch-orbitShow .Sun {
+    position: absolute;
+    visibility: hidden;
+  }
+  .ch-orbitShow .Sun[data-active] {
+    position: absolute;
+    visibility: unset;
+    -webkit-animation: appear 1.5s;
+            animation: appear 1.5s;
+  }
+  .ch-button {
+    width: 50px;
+    color: black;
+    font-size: 1.8rem;
+    opacity: 1 !important;
+    background-color: white;
+    position: absolute;
+    z-index: 111;
+  }
+  .ch-button.prev {
+    left: 1rem;
+  }
+  .ch-button.next {
+    right: 1rem;
+  }
+}
+@media screen and (max-width: 990px) and (max-width: 525px) {
+  .ch-orbitShow > .Sun {
+    font-size: 1rem;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    visibility: hidden;
+  }
+  .ch-orbitShow > .Sun > .planet {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .notNavBar .myProjects {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1050px) and (max-width: 850px) {
+  .notNavBar .myProjects {
+    width: 100%;
+    display: block;
+  }
+  .notNavBar .myProjects .card {
+    margin: 15px auto;
+  }
+}/*# sourceMappingURL=myStyle.css.map */

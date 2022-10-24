@@ -1,0 +1,311 @@
+$color-1: rgb(63, 78, 79);
+$color-2: rgb(44, 54, 57);
+$color-3: rgb(162, 123, 92);
+$color-4: rgb(220, 215, 201);
+
+@import "mixins";
+
+* {
+  background-color: $color-1;
+  color: white;
+  margin: 0;
+  padding: 0;
+  transition: background-color 1s;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+#menuShow {
+  background-color: unset;
+  display: none;
+  text-align: right;
+  margin-right: 0.6rem;
+  button {
+    border: 3px solid black;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  button:hover {
+    font-size: 2.5rem;
+  }
+}
+
+.navBar {
+  z-index: 111;
+  position: fixed;
+  width: 100%;
+  ul {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    background-color: $color-2;
+    li {
+      color: $color-4;
+    }
+
+    #DayNight {
+      cursor: default;
+      display: flex;
+      text-decoration: none;
+      font-size: 2.2rem;
+      background-color: unset;
+      @include sliderBox(100px, 100%);
+    }
+  }
+
+  li {
+    background-color: unset;
+    margin: auto 25px;
+    a {
+      background-color: unset;
+      text-decoration: none;
+      font-size: 2.2rem;
+      background-color: $color-2;
+      border-radius: 20px;
+      padding: 5px 10px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+    a:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+.notNavBar {
+  height: calc(100vh);
+  width: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+
+  .ch-header {
+    margin-top: calc(2.2rem + 50px);
+    text-align: center;
+  }
+
+  .ch-content {
+    width: 80%;
+    display: flex;
+    margin: auto;
+
+    img {
+      width: 512px;
+      height: 512px;
+      margin: 15px;
+      border-radius: 20px;
+    }
+    #includedAboutMe {
+      margin: auto;
+      padding: 15px;
+      border-radius: 20px;
+      background-color: $color-2;
+      font-size: 1.4em;
+    }
+    #includedAboutMe * {
+      background-color: unset;
+    }
+  }
+  .switch {
+    height: 42px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    right: 16rem;
+    font-size: 2rem;
+    @include sliderBox(84px, 100%);
+    button {
+      margin: auto 5px;
+    }
+  }
+
+  .ch-orbitShow {
+    margin: 125px auto;
+    width: 80%;
+    display: flex;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+    .Sun {
+      margin: auto;
+      position: relative;
+      display: flex;
+
+      border-radius: 100px;
+      width: 150px;
+      height: 150px;
+      background-color: $color-3;
+      color: black;
+      font-size: 1.5rem;
+      transition: background-color 0.5s;
+      user-select: none;
+      cursor: pointer;
+
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .Sun:hover {
+      background-color: $color-4;
+    }
+    .Sun > .planet {
+      background-color: $color-4;
+      color: black;
+      opacity: 0;
+      font-size: 0rem;
+
+      width: 70px;
+      height: 70px;
+      border-radius: 200px;
+
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+
+      img {
+        background-color: unset;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .Sun > .planet:hover {
+      font-size: 1.2rem;
+      img {
+        display: none;
+      }
+    }
+  }
+  .ch-button {
+    opacity: 0;
+  }
+
+  .myProjects {
+    margin: auto;
+    display: flex;
+    width: 80%;
+    .card {
+      * {
+        font-size: 1.3rem;
+        color: black;
+        text-align: center;
+        background: none;
+      }
+      position: relative;
+      display: grid;
+      grid-template-rows: 80% 20%;
+      margin: auto;
+
+      width: 280px;
+      height: 400px;
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+
+      justify-content: center;
+      align-items: center;
+
+      opacity: 50%;
+      transition: opacity 0.5s;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .active {
+        display: grid;
+        opacity: 1;
+        cursor: default;
+      }
+    }
+    .card:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .card.active a {
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      padding: 15px;
+      border-radius: 20px;
+      h3 {
+        color: black;
+      }
+      transition: all 0.3s;
+    }
+
+    .card.active a:hover {
+      background-color: black;
+      h3 {
+        color: white;
+      }
+    }
+  }
+
+  .ContactMe {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 5%;
+      width: 96px;
+      height: 96px;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      padding: 5px;
+      margin-bottom: 5px;
+      font-size: 1.3rem;
+      border-radius: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+      }img:hover{
+        width: 90%;
+        height: 90%;
+      }
+    }
+  }
+}
+
+/* animations */
+@keyframes HomeToOrigin {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes OriginToHome {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@import "mediaQ";

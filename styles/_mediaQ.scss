@@ -1,0 +1,184 @@
+//Information
+@media screen and (max-width: 1435px) {
+  .ch-content {
+    #includedAboutMe * {
+      font-size: 1.2rem;
+      p {
+        text-align: justify;
+      }
+    }
+  }
+}
+
+/* NavBar */
+@media screen and (max-width: 1175px) {
+  #menuShow {
+    display: block;
+    position: absolute;
+    z-index: 111;
+    left: 1rem;
+    top: 2rem;
+    transition: all 0.5s ease;
+  }
+
+  .navBar {
+    z-index: 22;
+    position: absolute;
+    left: -20rem;
+    top: 0;
+    width: 20rem;
+    height: 100%;
+    text-align: center;
+    transition: left 0.5s ease;
+  }
+  .navBar ul {
+    padding-top: 5rem;
+    height: 100%;
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    li {
+      margin: 2rem auto;
+    }
+    #DayNight {
+      justify-content: center;
+      height: 3rem;
+    }
+  }
+  .notNavBar {
+    height: 100vh;
+
+    .ch-header {
+      margin-top: 15px;
+    }
+    .switch {
+      justify-content: center;
+      right: 0;
+      margin: 10px auto;
+    }
+
+    .ch-content {
+      height: 525px;
+      position: relative;
+      display: block;
+      img {
+        background-color: $color-2;
+        float: left;
+      }
+
+      @media screen and(max-width:999px) {
+        margin: auto;
+        display: block;
+        width: 95%;
+        justify-content: center;
+        
+      }
+      @media screen and(max-width:775px){
+        height: auto;
+      }
+      @media screen and(max-width:610px) {
+        display: grid;
+        width: 100%;
+        img {
+          padding: 0;
+          margin: 0;
+          float: none;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        #includedAbountMe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+//Orbit
+@media screen and (max-width: 990px) {
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .notNavBar {
+  }
+  #mySkills{
+    width: 100%;
+    position: relative;
+  }
+  .ch-orbitShow {
+    margin: 225px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .Sun {
+      position: absolute;
+      visibility: hidden;
+    }
+
+    .Sun[data-active] {
+      position: absolute;
+      visibility: unset;
+      animation: appear 1.5s;
+    }
+  }
+
+  .ch-button {
+    width: 50px;
+    color: black;
+    font-size: 1.8rem;
+    opacity: 1 !important;
+    background-color: white;
+    position: absolute;
+    z-index: 111;
+  }
+  .ch-button.prev {
+    left: 1rem;
+  }
+  .ch-button.next {
+    right: 1rem;
+  }
+
+  @media screen and (max-width: 525px) {
+    .ch-orbitShow > .Sun {
+      font-size: 1rem;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      visibility: hidden;
+
+      > .planet {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+//Cards
+@media screen and (max-width: 1050px) {
+  .notNavBar {
+    .myProjects {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 850px) {
+      .myProjects {
+        width: 100%;
+        display: block;
+      }
+      .myProjects .card {
+        margin: 15px auto;
+      }
+    }
+  }
+}
