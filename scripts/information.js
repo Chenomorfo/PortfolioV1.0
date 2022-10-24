@@ -208,7 +208,7 @@ $(document).ready(function () {
   $(window).resize(function () {
     if ($(this).width() > 1175) {
       $(".navBar ul").css("display", "flex");
-      navBar = true;
+      navBar = false;
     } else {
       /* navBar = false; */
       $(".navBar ul").css("display", "block");
