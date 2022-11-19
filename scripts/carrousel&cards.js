@@ -107,4 +107,5 @@ var JavaScript = [
   '<a target="_blank" href="https://github.com/Chenomorfo/CssIdeas"><h3>CSS/JS Projects</h3></a>',
   "Personal Projects",
 ];
-var Java = ["School Projects (NetBeans)"];
+var Java = [ '<a target="_blank" href="https://github.com/Chenomorfo/MDI-Java-Program"><h3>School Project - MDI program</h3></a>',
+'<a target="_blank" href="https://github.com/Chenomorfo/Java-Snake-Game"><h3>Snake Game</h3></a>'];
